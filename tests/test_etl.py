@@ -7,7 +7,7 @@ import pytest
 
 @pytest.fixture(scope="module")
 def spark():
-    s = SparkSession.builder.appName("Testing PySpark Example").getOrCreate()
+    s =SparkSession.builder.master("local[1]").appName("Testing PySpark Example").getOrCreate()
     yield s
     s.stop()
 

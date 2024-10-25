@@ -2,7 +2,7 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, regexp_replace
 
-spark = SparkSession.builder.appName("Testing PySpark Example").getOrCreate()
+spark = SparkSession.builder.master("local[1]").appName("Testing PySpark Example").getOrCreate()
 
 
 # Remove additional spaces in name
