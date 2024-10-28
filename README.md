@@ -17,6 +17,11 @@ pip install pytest
 
 ## Running Tests
 
+To run all tests run from cli:
+```bash
+pytest
+```
+
 To execute individual test files, use the following command:
 
 ```bash
@@ -30,6 +35,11 @@ To run the sample test, use:
 ```bash
 pytest tests/test_etl.py
 ```
+
+## Important Notes
+
+- You can create a `conftest.py` file to define fixtures that can be reused across multiple tests, such as creating a SparkSession. This helps to avoid code duplication and makes it easier to manage shared resources.
+
 
 ## Troubleshooting
 
